@@ -1,0 +1,585 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    
+}
+html {
+  scroll-behavior:smooth;
+}
+@font-face {
+  font-family: fightclub;
+  src: url(../fonts/FightThis.ttf);
+}
+
+header{
+    position: sticky;
+    top:0;
+    z-index: 1;
+} 
+.announcement-bar{
+    font-size: 1rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    background-color: #ff3e6c;
+    color:white;
+    line-height: 3.5;
+    padding-left: 3.5em;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+
+.announcement-bar::after{
+    content: "";
+    animation:15s swap infinite;
+    animation-timing-function: linear;
+}
+@keyframes swap {
+    0%{
+        content:"FREE STANDARD SHHIPPING ON ₹599+ ORDERS"
+    }
+    15%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    25%{
+        opacity: 1;
+        transform: translateY(1);
+        content:"FLAT 17% OFF - USE CODE FIGHT17 AT CHECKOUT! "
+    }
+    35%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(1);
+        content:"NEW HERE? GET ₹100 OFF YOUR FIRST ORDER. USE CODE WELCOME100"
+    }
+    64%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    75%{
+        opacity:1;
+        transform: translateY(1);
+        content:"WANT TO JOIN THE CLUB? FRANCHISE WITH BITE CLUB — CLICK TO EXPLORE!"
+    }
+    87%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1);
+        content:"FREE STANDARD SHHIPPING ON ₹599+ ORDERS"
+    }
+}
+
+
+.nav-bar{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border:1px solid red; */
+    font-size: 1rem;
+    padding-left: 5em;
+    padding-top:1em;
+    padding-bottom: 1em;
+    background-color: white;
+    
+    
+
+}
+/* .logo{
+    width:17%;
+    align-content: end;
+} */
+.logo img {
+    width:10rem;
+    /* aspect-ratio: 1/0.2; */
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    font-size: 1em;
+    font-weight: 800;
+    padding:1em;
+}
+.nav-list li{
+    margin-left:1.5em;
+    /* cursor: pointer; */
+    color:black;
+}
+.nav-list li a{
+    color: black;
+    text-decoration: none;
+}
+.nav-sepration{
+    font-weight: 300;
+}
+
+.nav-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:2em;
+}
+.cart-icon{
+    /* border: 1px solid red; */
+    width: fit-content;
+    display: block;
+}
+.cart-icon img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    
+}
+
+.signup-btn ,.order-btn{
+    display: inline-block;
+    /* border:1px solid red; */
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 700;
+    padding:0.6em 1em;
+    text-decoration: none;
+    border-radius: 99999px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+
+}
+
+.signup-btn{
+    border: 1px solid black;
+    color:black;
+}
+.order-btn{
+    color:white;
+    /* background-color: #418614;
+    border: 1px solid #418614; */
+      background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    
+}
+.signup-btn:hover{
+    color:white;
+    background-color: black;
+}
+.order-btn:hover{
+    /* color:#418614; */
+    color: #ff3e6c;
+    background-color: white;
+}
+
+
+.hero{
+    font-size: 1rem;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    padding-top: 5.625em;
+    padding-bottom: 1.563em;
+    background-image: url(images/pinned.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+    background-position-x: 20%;
+    color: white;
+}
+.hero .date{
+    font-size:0.75rem;
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 100%;
+
+
+}
+.hero h2{
+    font-size:2rem;
+    font-family: Source Sans Pro;
+    font-weight: 700;
+    font-style: Bold;
+    line-height: 1.1;
+    letter-spacing: -3%;
+    margin-top:0.25em;
+    margin-bottom:0.25em;
+
+}
+.hero p, .about p , .more-about .moreabout-head, .more-about p{ 
+    font-size: 1rem;
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 1;
+}
+.blogs{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    font-size:1rem;
+    margin-top: 2.125rem;
+    
+}
+
+.blogs a{
+    font-size: 1rem;
+    display:inline-block;
+    margin-bottom: 2.5em;
+    
+
+}
+
+a:link,  a:visited, a:hover ,a:active{
+    color:black;
+    text-decoration: none;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+article img{
+    width: 100%;
+    aspect-ratio: 1.6/1;
+    border-radius: 5px;
+}
+
+article .date{
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 0.875rem;
+    line-height: 1;
+    margin-top: 1em;
+    width: 100%;
+}
+
+article h3{
+    font-family: Source Sans Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-top:0.375em;
+    margin-bottom:0.375em;
+    width: 100%;
+}
+
+article p{
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 1rem;
+    line-height: 1.25;
+    width: 100%;
+
+}
+
+footer{
+    margin-top: auto;
+    font-size: 0.75rem;
+    /* padding: 4em  12.67em 4rem 12.67em;
+    flex:1; */
+    background-color: #202020;
+    color:#ffffff;
+    /* border:1px solid red; */
+}
+
+.foot{
+    display: flex;  
+    /* margin: 4em  12.67em 4rem 12.67em; */
+        margin:4em auto;
+    flex-direction: column;
+    gap:0.25em;
+    text-align: center;
+}
+
+.footname{
+
+    width: 100vw;
+    /* border:1px solid red; */
+    font-family: Source Sans Pro;
+    font-weight: 700;
+    font-style: Bold;
+    line-height: 1.08;
+    letter-spacing: -3%;
+}
+
+.copyright{
+    /* border:1px solid red; */
+    width: 100vw;
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 1.25;
+}
+
+/* @media(min-width:768px){
+    .blogs{
+        font-size:1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        column-gap: 1.625rem;
+        background-color: yellow;
+
+    }
+    body{
+        background-color: red;
+    }
+
+} */
+
+@media(min-width:1024px){
+    main{
+    background-color: #fafafa;
+    }
+
+    .logo{
+    display: flex;
+    gap: 0.25em;
+    /* border: 1px solid red; */
+    align-items: center;
+    font-size:1.25rem;
+    }
+
+    .logo h1{
+        font-size:1.25rem;
+        line-height: 1.08;
+    }
+    .logo img{
+        font-size: 1.25rem;
+        width:1.713em;
+        height: 1.713em;
+    }
+    header{
+        font-size: 1.25rem;
+        padding:1.2em 2.5em;
+        /* border:1px solid black; */
+    }
+    li{
+    font-size: 1rem;
+    /* text-align: right; */
+    /* border: 1px solid red; */
+    }
+    ul{
+        /* border: 1px solid red; */
+        gap:3em;
+        font-size: 1rem;
+    }
+    .hero{
+        font-size: 1rem;
+        padding-left: 3.25em;
+        /* padding-right: 23.438em; */
+        padding-top: 19.75em;
+        padding-bottom: 3.75em;
+        background-position-y: 72%;
+        background-position-x: 20%;
+        /* border: 1px solid red; */
+    }
+    .hero .date{
+        font-size:1rem;
+        width:54%;
+        /* border: 1px solid red; */
+    }
+    .hero h2{
+        font-size:2.5rem;
+        font-family: Source Sans Pro;
+        font-weight: 700;
+        font-style: Bold;
+        line-height: 1.1;
+        letter-spacing: -3%;
+        margin-top:0.225em;
+        margin-bottom:0.225em;
+        /* border: 1px solid red; */
+        width:fit-content;
+
+    }
+    .hero p{
+        width:54%;
+        /* border: 1px solid red; */
+    }
+    .blogs{
+        margin-left: 3.125rem;
+        margin-right: 3.125rem;
+        font-size:1rem;
+        margin-top: 3.125rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        column-gap: 1.625rem;
+        row-gap: 2.875rem;
+
+    }
+
+    .blogs a{
+    font-size: 1rem;
+    display:inline-block;
+    margin-bottom: 2.5em;
+    
+    }
+
+
+}
+
+/* For about me page */
+
+.profPic{
+    font-size: 1rem;
+    margin:1.625em auto 1.625em 1.25em;
+    width: 11.375em;
+    height: 11.375em;
+    border-radius: 50%;
+    background-image: url("images/profile.jpg");
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position:  80% 25% ; 
+}
+
+.about{
+    font-size: 1rem;
+    margin:0 1.625em 2.813em 1.625em;
+}
+
+.about h2{
+    font-family: Source Sans Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 2.178rem;
+    line-height: 1.08;
+    letter-spacing: -3%;
+    margin-bottom: 0.459em;
+}
+
+.more-about{
+    font-size: 1rem;
+    margin-top:3.125em;
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+
+}
+
+.more-about .moreabout-head{
+    font-weight: 700;
+    /* border:1px solid blue; */
+}
+
+.recent-post-heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: Source Sans Pro;
+    margin-bottom: 1.688em;
+}
+
+@media(min-width:1024px){
+
+    .profPic{
+    font-size: 1rem;
+    margin:5.625em auto 3.125em 3.125em;
+    position: relative;
+    z-index: 1;
+
+    }
+    .about{
+        font-size:1rem;
+        margin:0;
+        /* border: 1px solid red; */
+        position: relative;
+        top: -13.25em;
+        left: 7.563em;
+        margin-right: 3.313em;
+        margin-bottom: -10.188em;
+        width: 86%;
+        z-index: 2;
+    }
+    .about .h2shift{
+        padding-left:4.083em;
+        /* border:1px solid red; */
+        font-size: 2.25rem;
+        margin-bottom: 0.278em;
+    }
+    .about .pshift{
+        padding-left: 9.188em;
+        /* border:1px solid red; */
+        font-size: 1rem;
+        margin-bottom:6.25em;
+    }
+    .more-about{
+        /* font-size: 1rem; */
+        padding-right: 4.188em;
+        gap:1.5em;
+    }
+
+    .recent-post-heading{
+        font-size: 1.5rem;
+        margin-bottom: -0.917em;
+    }
+}
+
+/* for blog page */
+
+#blog-intro{
+    background-image: none;
+    color:#151515;
+    padding-top:2em;
+    /* border: 1px solid red; */
+}
+#blog-intro  h2{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+#blogpage-img{
+    width:100%;
+    aspect-ratio: 2/1;
+    margin:0;
+    padding: 0%;
+    background-position: 60% 68%;
+    margin-top: 2.188em;
+    margin-bottom: 2.188em;
+    border-radius: 5px;
+}
+#more-about-forblog{
+    margin-bottom: 50px;
+}
+.blogs-forblogpage{
+    margin-left:0px;
+    margin-right: 0px;
+}
+
+@media(min-width:1024px){
+    #blog-intro #date-intro{
+        font-size:1rem;
+        margin-left:4.5em;
+        margin-right:4.5em;
+        width: 80%;
+
+    }
+    #blog-intro #head-intro{
+        font-size:2.25rem;
+        margin-left:1.889em;
+        width: 80%;;
+    }
+    #blog-intro #para-intro{
+        font-size: 1rem;
+        margin-left:4.25em;
+        width: 85%;
+    }
+    #more-about-forblog p{
+        width: 95%;
+        font-size:1rem;
+        margin-left:4.25em;
+
+    }
+    #blog-intro .blogs-forblogpage p{
+        width:100%;
+    }
+
+
+}

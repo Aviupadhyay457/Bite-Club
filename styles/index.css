@@ -1,0 +1,1139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    
+}
+html {
+  scroll-behavior:smooth;
+}
+@font-face {
+  font-family: fightclub;
+  src: url(../fonts/FightThis.ttf);
+}
+
+header{
+    position: sticky;
+    top:0;
+    z-index: 1;
+} 
+.announcement-bar{
+    font-size: 1rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    background-color: #ff3e6c;
+    color:white;
+    line-height: 3.5;
+    padding-left: 3.5em;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+
+.announcement-bar::after{
+    content: "";
+    animation:15s swap infinite;
+    animation-timing-function: linear;
+}
+@keyframes swap {
+    0%{
+        content:"FREE STANDARD SHHIPPING ON ₹599+ ORDERS"
+    }
+    15%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    25%{
+        opacity: 1;
+        transform: translateY(1);
+        content:"FLAT 17% OFF - USE CODE FIGHT17 AT CHECKOUT! "
+    }
+    35%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(1);
+        content:"NEW HERE? GET ₹100 OFF YOUR FIRST ORDER. USE CODE WELCOME100"
+    }
+    64%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    75%{
+        opacity:1;
+        transform: translateY(1);
+        content:"WANT TO JOIN THE CLUB? FRANCHISE WITH BITE CLUB — CLICK TO EXPLORE!"
+    }
+    87%{
+        opacity:0.5;
+        transform:translateY(2)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1);
+        content:"FREE STANDARD SHHIPPING ON ₹599+ ORDERS"
+    }
+}
+
+
+.nav-bar{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border:1px solid red; */
+    font-size: 1rem;
+    padding-left: 5em;
+    padding-top:1em;
+    padding-bottom: 1em;
+    background-color: white;
+    
+    
+
+}
+/* .logo{
+    width:17%;
+    align-content: end;
+} */
+.logo img {
+    width:10rem;
+    /* aspect-ratio: 1/0.2; */
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    font-size: 1em;
+    font-weight: 800;
+    padding:1em;
+}
+.nav-list li{
+    margin-left:1.5em;
+    /* cursor: pointer; */
+    color:black;
+}
+.nav-list li a{
+    color: black;
+    text-decoration: none;
+}
+.nav-sepration{
+    font-weight: 300;
+}
+
+.nav-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:2em;
+}
+.cart-icon{
+    /* border: 1px solid red; */
+    width: fit-content;
+    display: block;
+}
+.cart-icon img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    
+}
+
+.signup-btn ,.order-btn{
+    display: inline-block;
+    /* border:1px solid red; */
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 700;
+    padding:0.6em 1em;
+    text-decoration: none;
+    border-radius: 99999px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+
+}
+
+.signup-btn{
+    border: 1px solid black;
+    color:black;
+}
+.order-btn{
+    color:white;
+    /* background-color: #418614;
+    border: 1px solid #418614; */
+      background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    
+}
+.signup-btn:hover{
+    color:white;
+    background-color: black;
+}
+.order-btn:hover{
+    /* color:#418614; */
+    color: #ff3e6c;
+    background-color: white;
+}
+
+/* for main part */
+
+.hero{
+    background-color: #ADD4F1;
+    display: flex;
+    padding:3em 3em;
+    background-image: url("../images/burger-in-hand.png");
+    background-position: 100% 39%;
+    background-repeat: no-repeat;
+    background-size:50%;
+}
+
+.hero-text{
+    
+    background-color: #232B31;
+    width:40%;
+    color:white;
+    padding:1.7em 1em;
+}
+
+
+
+.hero-text h1{
+     
+    font-size: 4rem;
+}
+.hero-text p{
+    font-size: 1rem;
+}
+
+.hero-text h1 span, .hero-text p span {
+   font-family: fightclub;
+    color: #ff3e6c;
+}
+
+.hero-text p span{
+    font-size: 2rem;
+}
+
+.homepage-menu{
+    background-color: #F4F3E7;
+    
+}
+
+.homepage-menu-options{
+    display: flex;
+    justify-content:center;
+    font-size: 2rem;
+    gap:2em;
+    padding-top:2em;
+    list-style-type: none;
+    color: #ff3e6c;
+    
+}
+
+.homepage-menu-options li a{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+
+}
+/* .home-menu-options-selected{
+    width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: auto;
+} */
+.homepage-menu-options li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.homepage-menu-options li span{
+    visibility:hidden;
+    font-weight: 900;
+}
+
+#homepage-main-fight span{
+    visibility:visible;
+
+}
+
+#homepage-side-hustles , #homepage-thirst-club , #homepage-sweet-knockouts{
+    opacity: 0.6;
+    transition-duration: 0.5s;
+}
+
+#homepage-side-hustles:hover, #homepage-thirst-club:hover , #homepage-sweet-knockouts:hover{
+    opacity: 1;
+}
+/* .homepage-menu-options li a:active .homepage-menu-options li span{
+    visibility:visible;
+} */
+
+
+.homepage-food-items{
+    padding-left:5em;
+    padding-right: 5em;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap:4em;
+    padding-bottom: 3em;
+}
+
+#homepage-dish-one-img{
+    
+    background-image: url("../images/knockout-burger-2.jpg");
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2em;
+    background-position-y: 60%;
+}
+#homepage-dish-two-img{
+    background-image: url("../images/one-inch-punch-wrap.jpg");
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2em;
+    background-position: 60% 50%;
+
+}
+#homepage-dish-three-img{
+    background-image: url("../images/mayhem-pizza.jpg");
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2em; 
+    background-position-y: 60%;   
+}
+
+.homepage-dish-one , .homepage-dish-two , .homepage-dish-three{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    justify-content: space-between;
+}
+
+.homepage-food-items h2{
+    font-family: fightclub;
+    color:#ff3e6c;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+}
+
+.homepage-food-items .food-tagline{
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.homepage-food-items a{
+    color:#ff3e6c;
+    cursor:pointer;
+}
+
+.homepage-dropdown-container{
+    display:flex;
+    flex-direction: column;
+    background-color:	#D8E5D6;
+    padding-left:5em;
+    padding-right: 5em;
+    padding-top: 3em;
+    align-items: center;
+    padding-bottom: 2em;
+    
+
+}
+
+.homepage-dropdown-container h2{
+    text-align: center;
+    color:#ff3e6c;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+.question{
+    cursor: pointer;
+
+    border: 1px solid #B4B8AE;
+    width: 100%;
+    padding-top:1.5em;
+    padding-bottom: 1.5em;
+    /* padding:1.5em 2em; */
+    border-radius: 1em;
+    margin-bottom: 1em;
+    
+}
+
+.only-question{
+    display: flex;
+    justify-content: space-between;
+    color:#ff3e6c;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+}
+
+.only-answer-one, .only-answer-two, .only-answer-three, .only-answer-four{
+    display: none;
+    /* border: 1px solid red; */
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.5em;
+}
+
+
+.only-answer ul{
+    
+    font-family: Fightclub;
+    list-style-type: none;
+    display: grid;
+    grid-template:1fr 1fr /1fr 1fr;
+    row-gap: 1em;
+}
+.only-answer ul li a{
+    color:#333;
+    /* font-family: fightclub; */
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+.only-answer ul li span{
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 0.8rem;
+    color:#ff3e6c;
+}
+.division-two, .division-one, .division-three, .division-four{
+    height:0.5px;
+    background-color:#B4B8AE;
+    margin-top: 1rem;
+    display:none;
+}
+
+.display-none{
+    display: block;
+}
+
+footer{
+    background-color: black;
+    padding-bottom: 3em;
+}
+
+.footer-one{
+    padding:2em 5em;
+    background-color: black;
+    color:white;
+    display: grid;
+    grid-template: 1fr/1fr 1fr 1fr 2fr;
+    column-gap: 7em;
+}
+.about-us ul , .inquiries ul , .explore ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+
+}
+.about-us ul li, .inquiries ul li, .explore ul li{
+    cursor: pointer;
+    /* transition-duration:2s; */
+
+}
+
+.about-us ul li a, .inquiries ul li a, .explore ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+.about-us ul li a:hover, .inquiries ul li a:hover, .explore ul li a:hover{
+    text-decoration-line: underline;
+    
+}
+.about-us ul li h2, .inquiries ul li h2, .explore ul li h2{
+    cursor:default;
+}
+
+.google-play, .app-store{
+    
+    width:39%;
+    margin-bottom: 1rem;
+}
+.google-play{
+    border:1px solid #A6A6A6;
+    border-radius: 5px;
+    padding:0.34em 0.4em;
+    /* width:35%; */
+}
+.social-links{
+    margin-top:1rem;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap:0.5em;
+    margin-bottom: 1rem;
+}
+
+
+.social-links-logo-container{
+    padding:0.5em 0.8em 0.3em 0.8em;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.social-links-logo{
+    width:1rem;
+
+}
+
+.social-links-logo-container:hover{
+    transform: scale(1.1);
+}
+
+.mailing-email{
+    margin-top: 1em;
+    background-color: black;
+    color: white;
+    border:1px solid white;
+    padding:0.3em 0.1em;
+}
+.mailing-email-btn{
+    background-color: white;
+    color:black;
+    border-radius: 9999px;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    font-weight: 700;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.hr-line{
+    margin-top: 2.5em;
+    height: 1px;
+    background-color: #A6A6A6;
+    margin-left: 2em;
+    margin-right: 5em;
+    margin-bottom: 2.5em;
+}
+
+.foot-copyright{
+    color:#E1E1E1;
+    padding-left: 5em;
+    margin-bottom: 0.2em;
+    font-size: 0.7rem;
+}
+
+.underline-on-hover {
+  position: relative;
+}
+
+
+.underline-on-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #ff3e6c;
+  transition: width 0.5s ease-out;
+}
+
+.underline-on-hover:hover::after {
+  width: 100%;
+}
+
+/* FOR MENU PAGE */
+
+.our-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+
+}
+.our-menu h2{
+    font-size: 2.8rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.our-menu ul{
+    font-size: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    gap:1em;
+    margin-bottom: 2.5em;
+}
+
+
+
+.our-menu ul li a{
+    font-size: 1.3rem;
+    border:1.5px solid #ff3e6c;
+    border-radius: 9999px;
+    padding:0.4em 1em;
+    background-color: white;
+    color:#ff3e6c;
+    font-weight: 200;
+    text-decoration: none;
+    width:inherit;
+}
+
+.our-menu ul li a:hover{
+    background-color: #ff3e6c;
+    color:white;
+}
+.fa-burger, .fa-hotdog, .fa-wine-glass, .fa-ice-cream{
+    margin-right: 0.5em;
+}
+
+
+.menu-food-category{
+    padding-top: 2em;
+    padding-left: 5em;
+    background-color: #F4F4F4;
+    padding-right: 10em;
+    padding-bottom: 5em;
+}
+.menu-food-category h3{
+    font-family: Fightclub;
+    color: #ff3e6c;
+    font-size: 2.5rem;
+    margin-bottom: 0.1em;
+}
+.menu-food-category p{
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 2em;
+}
+
+.food-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap:3em;
+
+}
+
+
+.menu-item{
+    background-color: white;
+    border-radius: 2rem;
+    padding:1em;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    cursor:pointer;
+    transition: transform 0.4s ease, box-shadow 0.6s ease;
+}
+
+.menu-item h4{
+
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    font-family: Fightclub;
+    color:#ff3e6c;
+    font-size: 1.5rem;
+}
+.menu-item p{
+    font-size: 0.8rem;
+}
+
+.menu-item:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.food-item-img , .food-item-img-two{
+    background-image: url("../images/knockout-burger-1.png");
+    aspect-ratio: 1/0.8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2em;
+    background-color: #A5D311;
+    background-size: 80%;
+    background-position: center;
+    
+}
+
+.food-item-img-two{
+    background-image: url("../images/pizza.png");
+}
+
+/* for contact us page */
+
+.contact-us-heading{
+    font-size:3rem;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #FAFAFA;
+    color: #ff3e6c;
+}
+
+.contact-us-section{
+    display:grid;
+    grid-template: 1fr 1fr/repeat(6,1fr);
+    margin-left: 5em;
+    margin-right: 5em;
+    gap:2em;
+    margin-bottom: 5em;
+}
+
+.contact-us-section div{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-left:2em;
+    padding-right:2em;
+    
+}
+.contact-us-section div i{
+    font-size: 3rem;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    color:#ff3e6c;
+}
+
+.contact-us-section div h2{
+    font-size:1.5rem;
+    margin-bottom:0.5em;
+}
+
+.contact-us-chat, .contact-us-help , .contact-us-message{
+    grid-column:span 2;
+}
+
+.contact-us-catering, .contact-us-partner{
+    grid-column:span 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+
+.contact-us-catering a, .contact-us-partner a{
+    margin-top: 1em;
+}
+
+
+.contact-us-help label{
+    font-size:0.8rem;
+    color:#A6A6A6;
+    margin-bottom: 0.4em;
+    width: 50%;
+    text-align: left;
+}
+
+.contact-us-help select{
+    border:none;
+    background-color:#FAFAFA;
+    border-bottom:1px solid #A6A6A6;
+    width:50%;
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-bottom: 4em;
+}
+
+.contact-us-section div a{
+    display: inline-block;
+    border:1px solid black;
+    color:black;
+    border-radius:9999px;
+    text-decoration: none;
+    padding:0.5em 0.9em;
+    font-weight: 600;
+    margin-bottom: 3em;
+}
+
+.contact-us-section div a:hover{
+    background-color: black;
+    color:white;
+}
+
+.contact-us-chat p, .contact-us-message p{
+    font-size: 1rem;
+    margin-bottom:0.4em;
+}
+
+.contact-us-chat a{
+    margin-top:3em;
+}
+
+.contact-us-message .contact-us-msg-disclaimer{
+    font-size:0.7rem;
+    margin-top: 2.5em;
+}
+
+
+
+/* FOR ABOUT US PAGE */
+.about-us-intro{
+    background-color: #F4F3E7;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2em;
+    padding-bottom: 5em;
+    display: grid;
+    gap:5em;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.about-us-intro-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-us-intro-text h2{
+    color:#ff3e6c;
+    font-family:Fightclub;
+    font-size: 4rem;
+}
+.about-us-intro-text p{
+    
+    font-style:oblique;
+}   
+.about-us-intro-color-box {
+    background: 
+      linear-gradient(to right,
+        #F4F3E7 0%,
+        #F4F3E7 34%,
+        #B1E6F8 34%,
+        #B1E6F8 82%,
+        #F4F3E7 82%,
+        #F4F3E7 88%,
+        #ff3e6c 88%,
+        #ff3e6c 94%,
+        #31234D 94%,
+        #31234D 100%
+      );
+      /* ,
+      url("../images/tyler-durden.png") */
+    aspect-ratio: 1 / 0.8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position-x: 70%;
+    /* border:1px solid black; */
+    display: flex;
+    align-items: center;
+}
+
+.color-box-image-container{
+ background-image: url("../images/tyler-durden.png");
+ width: 65%;
+ aspect-ratio: 1/1.1;
+ background-size: cover;
+ background-repeat: no-repeat;
+ border:1px soild red;
+ border-radius: 50%;
+ background-position-x: 80%;
+ padding:2em 3em 0 3em;
+ /* background-color:#FBF6D6 ; */
+ 
+}
+
+.about-us-core-values{
+    background-color: white;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+
+.about-us-core-values h2, .about-us-by-numbers h2{
+    color: #404040;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1em;
+}
+
+.core-values-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6em;
+    row-gap:4em;
+}
+.core-value{
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(9,1fr);
+    grid-template-areas: 
+    "logo head head head head head head head head"
+    ".... info info info info info info info info"
+    ".... info info info info info info info info"
+    ;
+    column-gap:2em;
+    row-gap:0.5em;
+
+}
+.core-value i{
+    grid-area: logo;
+    font-size: 2.5rem;
+    color:#ff3e6c
+}
+
+.core-value h3{
+    grid-area:head;
+    font-size:1.5rem;
+    color:#ff3e6c
+}
+
+.core-value p{
+    grid-area:info;
+    font-size:1rem;
+    color:#404040;
+}
+
+.about-us-by-numbers{
+    padding-left:5em;
+    padding-top:3em;
+    padding-bottom:7em;
+    padding-right:5em;
+    /* background-color: #F4F3E7; */
+
+}
+
+.about-us-by-numbers h2{
+    font-size:2.5rem;
+}
+.about-us-by-numbers h2 span{
+    color:#ff3e6c;
+}
+
+.about-us-data-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:3em;
+}
+
+.about-us-data{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.about-us-data i{
+    font-size:4rem;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    color:#ff3e6c;
+}
+
+.about-us-data h3{
+    font-size:1.5rem;
+    margin-bottom:0.75em;
+}
+.about-us-data a{
+    color:#ff3e6c;
+    font-size:0.9rem;
+    margin-bottom:2em;
+}
+
+
+/* For Blog Page */
+
+.featured-blog{
+    padding-left: 5em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    background-image: url("../images/blog-featured.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y:50%;
+    background-position-x: 50%;
+    background-blend-mode:hue;
+}
+
+.featured-blog-data{
+    background-color:  rgba(0,0,0,0.9);
+    color:white;
+    padding-left:2em;
+    padding-top:3em;
+    padding-bottom:5em;
+    padding-right:2em;
+    width:45%;
+    display:flex;
+    flex-direction: column;
+}
+
+.featured-blog-data h2{
+    font-size: 2.5rem;
+    margin-top: 0.2em;
+    margin-bottom:0.5em;
+    line-height: 1.2;
+    color:#ff3e6c
+}
+.featured-blog-data a{
+    display: inline-block;
+    width:fit-content;
+    padding:0.7em 0.9em;
+    background-color: white;
+    color:#ff3e6c;
+    border-radius: 9999px;
+    border:1px solid white;
+    font-size: 1rem;
+    font-weight:600;
+    margin-top: 1.5em;
+    text-decoration: none;
+
+}
+
+.featured-blog-data a:hover{
+    color:white;
+    background-color: #ff3e6c;
+    border:1px solid #ff3e6c;
+}
+
+.featured-blog-date{
+    font-size:0.9rem;
+    font-style: oblique;
+}
+
+.featured-blog-para{
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    font-style: oblique;
+}
+
+.blog-section{
+    padding-top:5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 5em;
+}
+
+.blog-container-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap:2em;
+}
+
+.blog-container{
+    border:1px solid #F4F4F4;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blog-container h3{
+    margin-top:0.8em;
+    font-size:1.4rem;
+    padding-left:1em;
+    padding-right: 1em;
+    margin-bottom: 0.8em;
+    
+}
+.blog-container h3 a{
+    color:black;
+    text-decoration: none;
+}
+.blog-container h3 a:hover{
+    text-decoration: underline;
+    text-decoration-color: #ff3e6c;
+    cursor: pointer;
+}
+.blog-category{
+    font-size:1rem;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    font-weight: 700;
+    color:#ff3e6c;
+    margin-bottom:1em;
+}
+
+.blog-category a{
+    color:#ff3e6c;
+    text-decoration: none;
+}
+.blog-category a:hover{
+    cursor:default;
+}
+
+.blog-publish-date{
+    font-size:0.8rem;
+    color:#707070;
+    align-self: flex-end;
+    padding-right: 2em;
+    margin-bottom: 1.5em;
+}
+
+.blog-img{
+    width:100%;
+    aspect-ratio: 1/0.7;
+    background-image: url("../images/burnt-basque.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.gallery-section{
+    background-color: #F4F3E7;
+    padding-top:2em;
+    padding-bottom: 2em;
+}
+
+.gallery-section h1{
+    font-size: 3rem;
+    color:#404040;
+    text-align: center;
+    border:3px solid #ff3e6c;
+    border-left: none;
+    border-right: none;
+    line-height: 1.5;
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.gallery-grid{
+    background-color: white;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    column-count: 4;
+    column-gap: 1rem;
+}
+
+.gallery-img{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.gallery-load-more-btn-div{
+    background-color: white;
+    padding-bottom:1em;
+}
+.gallery-load-more-btn{
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content;
+    display: block;
+    padding:0.7em 0.9em;
+    padding:0.7em 0.9em;
+    background-color: black;
+    color:white;
+    border-radius: 9999px;
+    border:1px solid black;
+    font-size: 1rem;
+    font-weight:600;
+}
+
+.gallery-load-more-btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color:black
+}

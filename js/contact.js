@@ -1,0 +1,1 @@
+document.getElementById("nav-contact").style.color="#ff3e6c"
